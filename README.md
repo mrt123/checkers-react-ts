@@ -1,8 +1,11 @@
 # International Checkers
 
+demo: [demo](https://mrt123.github.io/checkers-react-ts/)
+old prototype [demo](https://mrt123.github.io/checkers-react/)
+
 What is this?
 
-- A fun little board game project written loosely with functional programming principles in mind (most functions are itnended to be pure, data structures are meant to not be mutated).
+- A fun little board game project written loosely with functional programming principles in mind (most functions are itnended to be pure, data structures are meant not to be mutated).
 - Emphasis was made to create readable abstractions of logic
 - Major logic complexity stems from the rules of international checkers, which not only compell player to perform a jump whenever possible, but to also perform a highest kill yielding jump. Also once a jump is started player must continue jumping untill all possible kills are performed within current move.
 

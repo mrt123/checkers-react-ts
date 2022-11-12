@@ -15,8 +15,8 @@ interface FieldProps {
   f: FieldType;
 }
 
-const moveSound = new Audio("/sounds/amusnd.wav");
-const wrongDropSound = new Audio("/sounds/lara_no.wav");
+const moveSound = new Audio("./sounds/amusnd.wav");
+const wrongDropSound = new Audio("./sounds/lara_no.wav");
 wrongDropSound.volume = 0.07;
 
 const Field = ({ f }: FieldProps) => {
@@ -36,14 +36,19 @@ const Field = ({ f }: FieldProps) => {
     dispatch({ type: SET_ACTIVE_PIN, pin: null }); // can't do it in Pin.tsx, since activePin is needed to MOVE_PIN_TO_FIELD
   };
 
-  const img = f.color === "white" ? "white.jpg" : "black.jpg";
+  const img = f.color === "white" ? "./white.jpg" : "./black.jpg";
   const pinEL = f.pin === null ? null : <Pin config={f.pin} />;
   const coordinateOverlay = debugCoordinatesSwitch ? (
     <FieldCoordinateOverlay position={f.position} />
   ) : null;
 
+  const handleImageLoaded = (e) => {
+    console.log(e);
+  };
+
   return (
     <FieldBox
+      color={f.color}
       img={img}
       highlight={f.highlighted}
       onMouseEnter={() =>
@@ -52,6 +57,7 @@ const Field = ({ f }: FieldProps) => {
       onMouseLeave={() => dispatch({ type: UNSET_HIGHLIGHT_FIELD, f })}
       onMouseUp={onMouseUp}
       cursorIsPointer={!!activePin}
+      onLoad={handleImageLoaded}
     >
       {coordinateOverlay}
       {pinEL}
