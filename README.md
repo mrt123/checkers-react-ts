@@ -1,7 +1,7 @@
 # International Checkers
 
-demo: [demo](https://mrt123.github.io/checkers-react-ts/)
-old prototype [demo](https://mrt123.github.io/checkers-react/)
+* [current version demo](https://mrt123.github.io/checkers-react-ts/) 
+* [old prototype](https://mrt123.github.io/checkers-react/)
 
 What is this?
 
