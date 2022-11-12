@@ -197,13 +197,6 @@ export const getAllJumpsPossibleForPlayer = (
       (j) => j.numberOfKills === maxKillsInAJump
     );
 
-    // console.log({
-    //   possibleJumps: possibleJumpsForAPin,
-    //   jumpsArePossible: possibleJumpsForAPin.length > 0,
-    //   jumpsWithMaxKills,
-    //   maxKillsInAJump,
-    // });
-
     return {
       possibleJumps: possibleJumpsForAPin,
       jumpsArePossible: possibleJumpsForAPin.length > 0,
@@ -212,8 +205,6 @@ export const getAllJumpsPossibleForPlayer = (
     };
   });
 
-  // console.log({ pinsPossibilities: playerPinsPossibilities });
-
   const allPossibleJumps = playerPinsPossibilities
     .filter((pP) => pP.jumpsArePossible)
     .flatMap((pP) => pP.possibleJumps);
@@ -221,38 +212,29 @@ export const getAllJumpsPossibleForPlayer = (
   return allPossibleJumps;
 };
 
-const getMaxPossibleJumpsDepth = (
-  jumpResults: MoveResult[],
-  activePlayer: Player
-) => {
-  const maxJumpStats = jumpResults.map((jumpResult) => {
-    // make a jump from destination in all legal directions
-    const allPossibleMoveResultsForPin = jumpResult.fields.map((f) => {
-      const pin = {
-        ...jumpResult.moveInfo?.startingPin,
-        position: jumpResult.moveInfo?.targetField.position,
-      };
-
-      const moveResult =
-        pin !== null ? tryMove(pin, f, jumpResult.fields, activePlayer) : null;
-      return moveResult;
-    });
-
-    const allPossibleJumpsForPin = allPossibleMoveResultsForPin.filter(
-      (m) => m !== null && m.isJump && m.isLegal
-    );
-
-    // return bumped number of possible jumps
-    return (
-      1 +
-      Math.max(
-        0,
-        ...getMaxPossibleJumpsDepth(allPossibleJumpsForPin, activePlayer)
-      )
-    );
+const getDeepJumpKillCount = (jumpResult: MoveResult, activePlayer: Player) => {
+  const allPossibleMoveResultsForPin = jumpResult.fields.map((f) => {
+    const pin = {
+      ...jumpResult.moveInfo?.startingPin,
+      position: jumpResult.moveInfo?.targetField.position,
+    };
+    const moveResult =
+      pin !== null ? tryMove(pin, f, jumpResult.fields, activePlayer) : null;
+    return moveResult;
   });
 
-  return maxJumpStats;
+  const allPossibleJumpsForPin = allPossibleMoveResultsForPin.filter(
+    (m) => m !== null && m.isJump && m.isLegal
+  );
+
+  const deepKillCountForEachPath = allPossibleJumpsForPin.map((j) =>
+    getDeepJumpKillCount(j, activePlayer)
+  );
+
+  return (
+    1 + // each recursive execution means + 1 jump level was possible
+    Math.max(0, ...deepKillCountForEachPath)
+  );
 };
 
 const getJumpDestinationsForPin = (pin: Pin, fields: Field[]): Field[] => {
@@ -283,18 +265,11 @@ export const getAllPossibleJumpsForAPin = (
   const allLegalJumpsForPin = allPossibleJumpResultsForPin.filter(
     (m) => m.isJump && m.isLegal
   );
-  // console.log(allPossibleJumpsForPin);
 
-  // NOTE maxPossibleStuff appears to be pin idependent (for all pins regardless which pin is held)
-  const maxPossibleStuff = getMaxPossibleJumpsDepth(
-    allLegalJumpsForPin,
-    activePlayer
-  );
-  // console.log(maxPossibleStuff); // todo use maxPossibleStuff to force player to use most powerful jump
   return allLegalJumpsForPin.map((jump) => {
     return {
       ...jump,
-      numberOfKills: maxPossibleStuff[0],
+      numberOfKills: getDeepJumpKillCount(jump, activePlayer),
     };
   });
 };
