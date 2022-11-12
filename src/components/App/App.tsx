@@ -7,6 +7,7 @@ import { Field } from "../game/Board/state/boardStateTypes";
 import MoveHistory from "../game/MoveHistory/MoveHistory";
 import PlayerColorIndicator from "../game/Pin/PlayerColorIndicator";
 import DebugSwitch from "../general/DebugSwitch";
+import AppVersion from "./AppVersion";
 
 const AppContainer = styled.div`
    {
@@ -73,6 +74,7 @@ const App = () => {
           <PlayerColorIndicator color={playerInfoColour} />
           <InfoText>{playerInfoText}</InfoText>
         </InfoIcon>
+        <AppVersion />
       </div>
       <div>
         <MoveHistory />
