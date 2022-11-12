@@ -1,7 +1,7 @@
 # International Checkers
 
-* [current version demo](https://mrt123.github.io/checkers-react-ts/) 
-* [old prototype](https://mrt123.github.io/checkers-react/)
+- [current version demo](https://mrt123.github.io/checkers-react-ts/)
+- [old prototype](https://mrt123.github.io/checkers-react/)
 
 What is this?
 
@@ -13,7 +13,13 @@ See rules: [https://en.wikipedia.org/wiki/International_draughts](https://en.wik
 
 TODO: a small logic update is required to let "kings" perform "big moves".
 
-# Getting Started with Create React App
+# Versioning
+
+### `npm version major|minor|patch`
+
+this will bump package.json, push changes, and deploy demo
+
+#
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
