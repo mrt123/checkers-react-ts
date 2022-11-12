@@ -1,3 +1,15 @@
+# International Checkers
+
+What is this?
+
+- A fun little board game project written loosely with functional programming principles in mind (most functions are itnended to be pure, data structures are meant to not be mutated).
+- Emphasis was made to create readable abstractions of logic
+- Major logic complexity stems from the rules of international checkers, which not only compell player to perform a jump whenever possible, but to also perform a highest kill yielding jump. Also once a jump is started player must continue jumping untill all possible kills are performed within current move.
+
+See rules: [https://en.wikipedia.org/wiki/International_draughts](https://en.wikipedia.org/wiki/International_draughts)
+
+TODO: a small logic update is required to let "kings" perform "big moves".
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
