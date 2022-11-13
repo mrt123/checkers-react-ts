@@ -3,12 +3,14 @@ import {
   isAtSameLocation,
   tryMove,
 } from "../boardApi/board";
+import { getGameSatus } from "../boardApi/gameStatus";
 import { compareWithJumpOpportunities } from "../boardApi/jumps";
 import { getMoveRecord } from "../boardApi/moveHistory";
 import {
   BoardAction,
   MOVE_PIN_TO_FIELD,
   SET_ACTIVE_PIN,
+  SET_LAST_KILLED_PIN,
   TRY_HIGLIGHT_FIELD,
   UNSET_HIGHLIGHT_FIELD,
 } from "./boardActions";
@@ -24,6 +26,13 @@ const boardReducer = (
       return {
         ...state,
         activePin: action.pin,
+      };
+    }
+
+    case SET_LAST_KILLED_PIN: {
+      return {
+        ...state,
+        lastKilledPin: action.pin,
       };
     }
 
@@ -74,6 +83,9 @@ const boardReducer = (
     }
 
     case UNSET_HIGHLIGHT_FIELD: {
+      // if field is not highlighted do not change state (avoids re-render of components relying on this state part)
+      if (!action.f.highlighted) return state;
+
       return {
         ...state,
         fields: getFieldsWithHighlight({
@@ -103,7 +115,9 @@ const boardReducer = (
 
       const forceAnotherJump = furtherJumpsPossibleForPin.length > 0;
 
-      const nextPlayer = forceAnotherJump
+      const gameStatus = getGameSatus(moveResult);
+      const lockActivePin = forceAnotherJump || gameStatus.gameOver;
+      const nextPlayer = lockActivePin
         ? state.activePlayer
         : getOtherPlayer(state.activePlayer);
 
@@ -113,9 +127,11 @@ const boardReducer = (
         ...state,
         fields: moveResult.fields,
         activePin: moveResult.updatedPin,
-        lockedActivePin: forceAnotherJump ? moveResult.updatedPin : null,
+        lockedActivePin: lockActivePin ? moveResult.updatedPin : null,
         activePlayer: nextPlayer,
         moveHistory: [...state.moveHistory, moveRecord],
+        gameStatus,
+        lastKilledPin: moveResult.killedPin || null,
       };
     }
 

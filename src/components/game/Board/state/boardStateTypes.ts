@@ -30,10 +30,17 @@ export interface MoveRecord {
   number: number;
 }
 
+export interface GameStatus {
+  gameOver: boolean;
+  winnerColor: string | null;
+}
+
 export interface BoardState {
+  gameStatus: GameStatus;
   activePlayer: Player;
   activePin: null | Pin;
   fields: Field[];
   moveHistory: MoveRecord[];
   lockedActivePin: null | Pin;
+  lastKilledPin: Pin | null;
 }

@@ -1,8 +1,10 @@
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../../state/store";
+import { isAtSameLocation } from "../Board/boardApi/board";
 import {
   MOVE_PIN_TO_FIELD,
   SET_ACTIVE_PIN,
+  SET_LAST_KILLED_PIN,
   TRY_HIGLIGHT_FIELD,
   UNSET_HIGHLIGHT_FIELD,
 } from "../Board/state/boardActions";
@@ -22,6 +24,9 @@ wrongDropSound.volume = 0.07;
 const Field = ({ f }: FieldProps) => {
   const dispatch = useDispatch();
   const activePin = useSelector((state: RootState) => state.board.activePin);
+  const lastKilledPin = useSelector(
+    (state: RootState) => state.board.lastKilledPin
+  );
   const debugCoordinatesSwitch = useSelector(
     (state: RootState) => state.debugSwitches.fieldsCoordinates
   );
@@ -30,6 +35,10 @@ const Field = ({ f }: FieldProps) => {
     if (f.highlighted) {
       moveSound.play();
       dispatch({ type: MOVE_PIN_TO_FIELD, pin: activePin, field: f });
+      setTimeout(
+        () => dispatch({ type: SET_LAST_KILLED_PIN, pin: null }),
+        1000 // synchronized with kill animation
+      );
     } else {
       if (activePin && f.pin !== activePin) wrongDropSound.play();
     }
@@ -37,13 +46,24 @@ const Field = ({ f }: FieldProps) => {
   };
 
   const img = f.color === "white" ? "./white.jpg" : "./black.jpg";
-  const pinEL = f.pin === null ? null : <Pin config={f.pin} />;
+  const killAnimatedPin =
+    lastKilledPin && isAtSameLocation(f, lastKilledPin) ? (
+      <Pin config={lastKilledPin} animateKill />
+    ) : null;
+
+  // console.log({ killAnimatedPin }); figure out re-renders on SET_ACTIVE_PIN
+
+  const pinEL = f.pin === null ? killAnimatedPin : <Pin config={f.pin} />;
   const coordinateOverlay = debugCoordinatesSwitch ? (
     <FieldCoordinateOverlay position={f.position} />
   ) : null;
 
   const handleImageLoaded = (e) => {
-    console.log(e);
+    console.log(e); // this is not called, find a better way to detect image load
+  };
+
+  const handleMouseLeave = () => {
+    if (f.highlighted) dispatch({ type: UNSET_HIGHLIGHT_FIELD, f });
   };
 
   return (
@@ -54,7 +74,7 @@ const Field = ({ f }: FieldProps) => {
       onMouseEnter={() =>
         activePin && dispatch({ type: TRY_HIGLIGHT_FIELD, f })
       }
-      onMouseLeave={() => dispatch({ type: UNSET_HIGHLIGHT_FIELD, f })}
+      onMouseLeave={handleMouseLeave}
       onMouseUp={onMouseUp}
       cursorIsPointer={!!activePin}
       onLoad={handleImageLoaded}

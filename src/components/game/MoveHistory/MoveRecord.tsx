@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { MoveRecord as MoveRecordType } from "../Board/state/boardStateTypes";
-import PlayerColorIndicator from "../Pin/PlayerColorIndicator";
+import PlayerColorIndicatorContainer from "../Pin/PlayerColorIndicator";
 
 interface MoveRecordProps {
   record: MoveRecordType;
@@ -58,7 +58,7 @@ const MoveRecord = ({ record }: MoveRecordProps) => {
   return (
     <MoveRecordBox>
       <RecordNumber>{record.number}</RecordNumber>
-      <PlayerColorIndicator color={record.playerColor} />
+      <PlayerColorIndicatorContainer color={record.playerColor} />
       <RecordText>{recordText}</RecordText>
       {captureIcon}
     </MoveRecordBox>

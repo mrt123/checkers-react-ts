@@ -1,10 +1,31 @@
 import styled from "styled-components";
 
-interface PinFaceProps {
-  isDragged: boolean;
+interface FaceSymbolProps {
+  direction: "up" | "down";
   isKing: boolean;
-  moveDirection: "up" | "down";
+  showSkull: boolean;
 }
+
+const getSymbol = (
+  isKing: boolean,
+  direction: "up" | "down",
+  showSkull: boolean
+) => {
+  if (isKing) return "♛";
+  else if (showSkull) return "☠";
+  else return direction === "up" ? "↑" : "↓";
+};
+
+const FaceSymbol = styled.div<FaceSymbolProps>`
+  &:after {
+    content: "${(p) => getSymbol(p.isKing, p.direction, p.showSkull)}";
+  }
+  font-size: ${(p) => (p.isKing || p.showSkull ? "35" : "25")}px;
+  color: ${(p) => (p.isKing ? "yellow" : "black")};
+  opacity: ${(p) => (p.isKing || p.showSkull ? "1" : "0.08")};
+  text-shadow: ${(p) => (p.isKing ? "0px 0px 7px rgb(0 0 0)" : "none")};
+  font-weight: 900;
+`;
 
 interface PinFaceWrapperProps {
   isDragged: boolean;
@@ -29,31 +50,26 @@ const PinFaceWrapper = styled.div<PinFaceWrapperProps>`
   );
 `;
 
-interface FaceSymbolProps {
-  direction: "up" | "down";
+interface PinFaceProps {
+  isDragged: boolean;
   isKing: boolean;
+  showSkull: boolean;
+  moveDirection: "up" | "down";
 }
 
-const getSymbol = (isKing: boolean, direction: "up" | "down") => {
-  if (isKing) return "♛";
-  else return direction === "up" ? "↑" : "↓";
-};
-
-const FaceSymbol = styled.div<FaceSymbolProps>`
-  &:after {
-    content: "${(p) => getSymbol(p.isKing, p.direction)}";
-  }
-  font-size: ${(p) => (p.isKing ? "35" : "25")}px;
-  color: ${(p) => (p.isKing ? "yellow" : "black")};
-  opacity: ${(p) => (p.isKing ? "1" : "0.08")};
-  text-shadow: ${(p) => (p.isKing ? "0px 0px 7px rgb(0 0 0)" : "none")};
-  font-weight: 900;
-`;
-
-const PinFace = ({ isDragged, moveDirection, isKing }: PinFaceProps) => {
+const PinFace = ({
+  isDragged,
+  moveDirection,
+  isKing,
+  showSkull,
+}: PinFaceProps) => {
   return (
     <PinFaceWrapper isDragged={isDragged}>
-      <FaceSymbol direction={moveDirection} isKing={isKing} />
+      <FaceSymbol
+        direction={moveDirection}
+        isKing={isKing}
+        showSkull={showSkull}
+      />
     </PinFaceWrapper>
   );
 };

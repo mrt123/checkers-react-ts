@@ -11,12 +11,13 @@ export interface MoveInfo {
   canBeLegal: boolean;
 }
 
-interface MoveResult {
+export interface MoveResult {
   fields: Field[];
   isLegal: boolean;
   isJump: boolean;
   moveInfo: null | MoveInfo;
   updatedPin: Pin | null;
+  killedPin: Pin | null;
 }
 
 interface MoveResultWithKills extends MoveResult {
@@ -102,7 +103,7 @@ const getFieldsAfterMove = (fields: Field[], move: MoveInfo): Field[] => {
         isKing,
       };
       return { ...f, pin: pinWIthUpdatedKingStatus };
-    } else if (f.pin === killedPin) {
+    } else if (f.pin !== null && f.pin === killedPin) {
       return { ...f, pin: null };
     }
     return f;
@@ -150,6 +151,7 @@ export const tryMove = (
       isJump: false,
       moveInfo: null,
       updatedPin: null,
+      killedPin: null,
     };
 
   const moveInfo: MoveInfo = getMoveInfo(pin, fieldTarget);
@@ -172,6 +174,7 @@ export const tryMove = (
     isJump: insSuccessfullKill,
     updatedPin: updatedPin || null,
     moveInfo,
+    killedPin,
   };
 };
 

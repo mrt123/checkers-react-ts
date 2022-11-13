@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Draggable from "react-draggable";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "../../../state/store";
+import { isAtSameLocation } from "../Board/boardApi/board";
 import { SET_ACTIVE_PIN } from "../Board/state/boardActions";
 import { Pin as PinType } from "../Board/state/boardStateTypes";
 import PinBase from "./PinBase";
@@ -8,9 +10,10 @@ import PinFace from "./PinFace";
 
 interface PinProps {
   config: PinType;
+  animateKill?: boolean;
 }
 
-const Pin = ({ config }: PinProps) => {
+const Pin = ({ config, animateKill }: PinProps) => {
   const dispatch = useDispatch();
   const [isDragged, setIsDragged] = useState(false);
   const [dragPosition, setDragPosition] = useState({ x: 0, y: 0 });
@@ -25,22 +28,12 @@ const Pin = ({ config }: PinProps) => {
     setDragPosition({ x: 0, y: 0 });
   };
 
-  // NOTE: Below good example of kill animation
-  // spinning = [
-  //   { transform: "rotate(0) scale(1)" },
-  //   { transform: "rotate(360deg) scale(0)" },
-  // ];
+  const lockedPin = useSelector(
+    (state: RootState) => state.board.lockedActivePin
+  );
 
-  // spinTiming = {
-  //   duration: 2000,
-  //   iterations: 1,
-  // };
-
-  // el = document.querySelector(
-  //   "#root > div > div > div.sc-eDvSVe.llPSnE > div:nth-child(47) > div"
-  // );
-
-  // el.animate(spinning, spinTiming);
+  const pinIsLocked = isAtSameLocation(lockedPin, config);
+  const shouldPulse = pinIsLocked && !isDragged;
 
   const tunedColor =
     config.color === "white" ? "rgb(222,222,222)" : config.color;
@@ -48,8 +41,14 @@ const Pin = ({ config }: PinProps) => {
   return (
     <Draggable onStart={onDragStart} onStop={onDragEnd} position={dragPosition}>
       {/* Note: once element is dragged we disable its pointer events, so that other elements can receive mouse hover events */}
-      <PinBase isDragged={isDragged} color={tunedColor}>
+      <PinBase
+        isDragged={isDragged}
+        color={tunedColor}
+        pulse={shouldPulse}
+        animateKill={animateKill}
+      >
         <PinFace
+          showSkull={animateKill}
           isDragged={isDragged}
           moveDirection={config.moveDirection}
           isKing={config.isKing}

@@ -7,6 +7,10 @@ export const PLAYER_DATA = {
 };
 
 const defaultState: BoardState = {
+  gameStatus: {
+    gameOver: false,
+    winnerColor: null,
+  },
   activePlayer: {
     color: PLAYER_DATA.p2Color,
   },
@@ -14,6 +18,7 @@ const defaultState: BoardState = {
   fields: generateFields(),
   moveHistory: [],
   lockedActivePin: null,
+  lastKilledPin: null,
 };
 
 export default defaultState;

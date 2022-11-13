@@ -18,8 +18,7 @@ if (window.location.hostname === "localhost") {
       return (
         !actionIsUnsettingActivePin &&
         action.type !== UNSET_HIGHLIGHT_FIELD &&
-        true
-        // getState().debugSwitches.reduxLogs
+        getState().debugSwitches.reduxLogs
       );
     },
   });

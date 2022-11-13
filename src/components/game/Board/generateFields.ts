@@ -9,7 +9,12 @@ function createPin(
   color: string,
   moveDirection: "up" | "down"
 ) {
-  return { position: { x, y }, color, moveDirection, isKing: false };
+  return {
+    position: { x, y },
+    color,
+    moveDirection,
+    isKing: false,
+  };
 }
 
 function generatePinForField(f: Field, boardHeight: number): Pin | null {
