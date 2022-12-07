@@ -1,3 +1,5 @@
+import { JumpInfo } from "../boardApi/jumps";
+
 export interface PositionOnBoard {
   x: number;
   y: number;
@@ -8,6 +10,7 @@ export interface Pin {
   moveDirection: "up" | "down";
   position: PositionOnBoard;
   isKing: boolean;
+  shake: boolean;
 }
 
 export interface Field {
@@ -43,4 +46,6 @@ export interface BoardState {
   moveHistory: MoveRecord[];
   lockedActivePin: null | Pin;
   lastKilledPin: Pin | null;
+  showJumpOpportunities: boolean;
+  highestYieldingJumps: JumpInfo[];
 }

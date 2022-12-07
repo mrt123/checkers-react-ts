@@ -17,6 +17,9 @@ const InfoText = styled.div`
 
 const PlayerStatus = () => {
   const gameStatus = useSelector((state: RootState) => state.board.gameStatus);
+  const showJumpOportunities = useSelector(
+    (state: RootState) => state.board.showJumpOpportunities
+  );
 
   const activePlayer = useSelector(
     (state: RootState) => state.board.activePlayer
@@ -28,6 +31,7 @@ const PlayerStatus = () => {
     <PlayerStatusContainer>
       <PlayerColorIndicatorContainer color={activePlayer.color} animatePulse />
       <InfoText>{playerInfoText}</InfoText>
+      <div>{showJumpOportunities.toString()}</div>
     </PlayerStatusContainer>
   );
 };

@@ -11,8 +11,6 @@ What is this?
 
 See rules: [https://en.wikipedia.org/wiki/International_draughts](https://en.wikipedia.org/wiki/International_draughts)
 
-TODO: a small logic update is required to let "kings" perform "big moves".
-
 # Versioning
 
 ### `npm version major|minor|patch`

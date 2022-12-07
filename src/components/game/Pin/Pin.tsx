@@ -2,7 +2,7 @@ import { useState } from "react";
 import Draggable from "react-draggable";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../../state/store";
-import { isAtSameLocation } from "../Board/boardApi/board";
+import { isAtSameLocation } from "../Board/boardApi/position";
 import { SET_ACTIVE_PIN } from "../Board/state/boardActions";
 import { Pin as PinType } from "../Board/state/boardStateTypes";
 import PinBase from "./PinBase";
@@ -28,11 +28,9 @@ const Pin = ({ config, animateKill }: PinProps) => {
     setDragPosition({ x: 0, y: 0 });
   };
 
-  const lockedPin = useSelector(
-    (state: RootState) => state.board.lockedActivePin
-  );
+  const { lockedActivePin } = useSelector((state: RootState) => state.board);
 
-  const pinIsLocked = isAtSameLocation(lockedPin, config);
+  const pinIsLocked = isAtSameLocation(lockedActivePin, config);
   const shouldPulse = pinIsLocked && !isDragged;
 
   const tunedColor =
@@ -45,10 +43,11 @@ const Pin = ({ config, animateKill }: PinProps) => {
         isDragged={isDragged}
         color={tunedColor}
         pulse={shouldPulse}
-        animateKill={animateKill}
+        animateKill={!!animateKill}
+        shake={config.shake}
       >
         <PinFace
-          showSkull={animateKill}
+          showSkull={!!animateKill}
           isDragged={isDragged}
           moveDirection={config.moveDirection}
           isKing={config.isKing}

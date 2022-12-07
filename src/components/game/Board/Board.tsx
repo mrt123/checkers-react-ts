@@ -5,6 +5,10 @@ import BoardBox from "./BoardBox";
 
 const Board = () => {
   const fields = useSelector((state: RootState) => state.board.fields);
+  console.log(
+    fields.findIndex((f) => f.pin?.shake),
+    fields
+  );
   const fieldsEls = fields.map((f, i) => <Field key={i} f={f} />);
   const boardWidth = Math.sqrt(fields.length);
   return <BoardBox boardWidth={boardWidth}>{fieldsEls}</BoardBox>;

@@ -1,17 +1,16 @@
 import { MoveRecord } from "../state/boardStateTypes";
-import { MoveInfo } from "./board";
+import { MoveResult } from "./board";
 
 export const getMoveRecord = (
-  moveInfo: MoveInfo,
+  moveResult: MoveResult,
   moveHistory: MoveRecord[]
 ): MoveRecord => {
   return {
-    playerColor: moveInfo.startingPin.color,
-    // enemyColor:
-    start: moveInfo.startingPin.position,
-    end: moveInfo.targetField.position,
-    killedPinCoordinate: null,
-    killedSomething: moveInfo.isJump,
+    playerColor: moveResult.description.activePin.color,
+    start: moveResult.description.activePin.position,
+    end: moveResult.description.targetField.position,
+    killedPinCoordinate: moveResult.outcome.killedPin?.position || null,
+    killedSomething: !!moveResult.legality.multiTileMoveInfo?.capturedPin,
     number: moveHistory.length + 1,
   };
 };

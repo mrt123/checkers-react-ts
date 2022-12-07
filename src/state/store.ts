@@ -22,7 +22,7 @@ if (window.location.hostname === "localhost") {
       );
     },
   });
-  middleWares.push(loggerMiddleware);
+  middleWares.push(loggerMiddleware as never);
 }
 
 const store = createStore(rootReducer, applyMiddleware(...middleWares));

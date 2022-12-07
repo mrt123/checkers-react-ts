@@ -1,17 +1,17 @@
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../../state/store";
-import { isAtSameLocation } from "../Board/boardApi/board";
+import { isAtSameLocation } from "../Board/boardApi/position";
 import {
   MOVE_PIN_TO_FIELD,
   SET_ACTIVE_PIN,
-  SET_LAST_KILLED_PIN,
+  SET_HIGHEST_YIELDING_JUMPS,
   TRY_HIGLIGHT_FIELD,
   UNSET_HIGHLIGHT_FIELD,
 } from "../Board/state/boardActions";
 import { Field as FieldType } from "../Board/state/boardStateTypes";
-import Pin from "../Pin/Pin";
 import FieldBox from "./FieldBox";
 import FieldCoordinateOverlay from "./FieldCoordinateOverlay";
+import useAnimatedPin from "./useAnimatedPin";
 
 interface FieldProps {
   f: FieldType;
@@ -23,10 +23,8 @@ wrongDropSound.volume = 0.07;
 
 const Field = ({ f }: FieldProps) => {
   const dispatch = useDispatch();
-  const activePin = useSelector((state: RootState) => state.board.activePin);
-  const lastKilledPin = useSelector(
-    (state: RootState) => state.board.lastKilledPin
-  );
+  const { activePin } = useSelector((state: RootState) => state.board);
+
   const debugCoordinatesSwitch = useSelector(
     (state: RootState) => state.debugSwitches.fieldsCoordinates
   );
@@ -35,25 +33,18 @@ const Field = ({ f }: FieldProps) => {
     if (f.highlighted) {
       moveSound.play();
       dispatch({ type: MOVE_PIN_TO_FIELD, pin: activePin, field: f });
-      setTimeout(
-        () => dispatch({ type: SET_LAST_KILLED_PIN, pin: null }),
-        1000 // synchronized with kill animation
-      );
     } else {
-      if (activePin && f.pin !== activePin) wrongDropSound.play();
+      const pinIsDroppedOnStartField = isAtSameLocation(activePin, f.pin);
+      if (!pinIsDroppedOnStartField) {
+        wrongDropSound.play();
+        dispatch({ type: SET_HIGHEST_YIELDING_JUMPS, value: true });
+      }
     }
     dispatch({ type: SET_ACTIVE_PIN, pin: null }); // can't do it in Pin.tsx, since activePin is needed to MOVE_PIN_TO_FIELD
   };
 
   const img = f.color === "white" ? "./white.jpg" : "./black.jpg";
-  const killAnimatedPin =
-    lastKilledPin && isAtSameLocation(f, lastKilledPin) ? (
-      <Pin config={lastKilledPin} animateKill />
-    ) : null;
 
-  // console.log({ killAnimatedPin }); figure out re-renders on SET_ACTIVE_PIN
-
-  const pinEL = f.pin === null ? killAnimatedPin : <Pin config={f.pin} />;
   const coordinateOverlay = debugCoordinatesSwitch ? (
     <FieldCoordinateOverlay position={f.position} />
   ) : null;
@@ -65,6 +56,10 @@ const Field = ({ f }: FieldProps) => {
   const handleMouseLeave = () => {
     if (f.highlighted) dispatch({ type: UNSET_HIGHLIGHT_FIELD, f });
   };
+
+  const pinEl = useAnimatedPin(f);
+
+  if (f.position.x === 9 && f.position.y === 4) console.log(f);
 
   return (
     <FieldBox
@@ -80,7 +75,7 @@ const Field = ({ f }: FieldProps) => {
       onLoad={handleImageLoaded}
     >
       {coordinateOverlay}
-      {pinEL}
+      {pinEl}
     </FieldBox>
   );
 };

@@ -1,4 +1,4 @@
-import generateFields from "../generateFields";
+import { generateFields, generatePinForField } from "../generateFields";
 import { BoardState } from "./boardStateTypes";
 
 export const PLAYER_DATA = {
@@ -15,10 +15,12 @@ const defaultState: BoardState = {
     color: PLAYER_DATA.p2Color,
   },
   activePin: null,
-  fields: generateFields(),
+  fields: generateFields(generatePinForField),
   moveHistory: [],
   lockedActivePin: null,
   lastKilledPin: null,
+  showJumpOpportunities: false,
+  highestYieldingJumps: [],
 };
 
 export default defaultState;

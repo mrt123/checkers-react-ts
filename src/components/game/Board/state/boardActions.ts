@@ -5,6 +5,7 @@ export const SET_LAST_KILLED_PIN = "SET_LAST_KILLED_PIN";
 export const TRY_HIGLIGHT_FIELD = "TRY_HIGLIGHT_FIELD";
 export const UNSET_HIGHLIGHT_FIELD = "UNSET_HIGHLIGHT_FIELD";
 export const MOVE_PIN_TO_FIELD = "MOVE_PIN_TO_FIELD";
+export const SET_HIGHEST_YIELDING_JUMPS = "SET_HIGHEST_YIELDING_JUMPS";
 
 export type BoardAction =
   | {
@@ -27,4 +28,8 @@ export type BoardAction =
       type: typeof MOVE_PIN_TO_FIELD;
       pin: Pin;
       field: Field;
+    }
+  | {
+      type: typeof SET_HIGHEST_YIELDING_JUMPS;
+      value: boolean;
     };

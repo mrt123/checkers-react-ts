@@ -3,21 +3,25 @@ import { PLAYER_DATA } from "./state/defaultState";
 
 export const BOARD_WIDTH = 10;
 
-function createPin(
+export function createPin(
   x: number,
   y: number,
   color: string,
-  moveDirection: "up" | "down"
+  moveDirection: "up" | "down",
+  isKing?: boolean
 ) {
   return {
     position: { x, y },
     color,
     moveDirection,
-    isKing: false,
+    isKing: !!isKing,
+    shake: false,
   };
 }
 
-function generatePinForField(f: Field, boardHeight: number): Pin | null {
+export type PinGenerator = (f: Field, boardHeight: number) => Pin | null;
+
+export function generatePinForField(f: Field, boardHeight: number): Pin | null {
   if (f.position.y <= 3 && f.color === "black")
     return createPin(f.position.x, f.position.y, PLAYER_DATA.p1Color, "down");
 
@@ -32,7 +36,7 @@ const getFieldColor = (x: number, y: number) => {
   return (x + y) % 2 === 0 ? "white" : "black";
 };
 
-const generateFields = (): Field[] => {
+export const generateFields = (generatePinForField: PinGenerator): Field[] => {
   const arrayLikeObject = {
     length: Math.pow(BOARD_WIDTH, 2),
   } as Array<unknown>;
@@ -52,5 +56,3 @@ const generateFields = (): Field[] => {
   });
   return fields;
 };
-
-export default generateFields;

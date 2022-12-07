@@ -1,21 +1,28 @@
+import { tryMove } from "../boardApi/board";
 import {
+  getFieldsWithHighlight,
+  unshakeAllPins,
+  updatePinShake,
+} from "../boardApi/field";
+import { getGameSatus, getOtherPlayer } from "../boardApi/gameStatus";
+import {
+  compareWithJumpOpportunities,
   getAllPossibleJumpsForAPin,
-  isAtSameLocation,
-  tryMove,
-} from "../boardApi/board";
-import { getGameSatus } from "../boardApi/gameStatus";
-import { compareWithJumpOpportunities } from "../boardApi/jumps";
+  getHihestYieldingJumps as getHighestYieldingJumps,
+} from "../boardApi/jumps";
 import { getMoveRecord } from "../boardApi/moveHistory";
+import { isAtSameLocation } from "../boardApi/position";
 import {
   BoardAction,
   MOVE_PIN_TO_FIELD,
   SET_ACTIVE_PIN,
+  SET_HIGHEST_YIELDING_JUMPS,
   SET_LAST_KILLED_PIN,
   TRY_HIGLIGHT_FIELD,
   UNSET_HIGHLIGHT_FIELD,
 } from "./boardActions";
-import { BoardState, Field, Pin, Player } from "./boardStateTypes";
-import defaultState, { PLAYER_DATA } from "./defaultState";
+import { BoardState, Pin } from "./boardStateTypes";
+import defaultState from "./defaultState";
 
 const boardReducer = (
   state: BoardState = defaultState,
@@ -23,9 +30,13 @@ const boardReducer = (
 ) => {
   switch (action.type) {
     case SET_ACTIVE_PIN: {
+      // NOTE unsetting actions logs might be switched off
+      const actionIsAnUnset = action.pin === null;
+
       return {
         ...state,
         activePin: action.pin,
+        fields: actionIsAnUnset ? state.fields : unshakeAllPins(state.fields),
       };
     }
 
@@ -39,7 +50,6 @@ const boardReducer = (
     case TRY_HIGLIGHT_FIELD: {
       const pinIsNotAllowedToMove =
         state.lockedActivePin &&
-        state.activePin &&
         !isAtSameLocation(state.activePin, state.lockedActivePin);
 
       if (pinIsNotAllowedToMove) return state;
@@ -51,10 +61,20 @@ const boardReducer = (
         state.activePlayer
       );
 
-      if (!moveResult.isLegal) return state; // early termination for performance
+      console.log(moveResult);
+
+      if (!moveResult.legality.isLegal) return state; // early termination for performance
+
+      /**
+       * Notice:
+       * - jumping is compulsory when capture can be made
+       * - jump yiedling largest capture must be chosen
+       * - it is compulsory to keep jumping until all the jumps are completed
+       */
 
       const moveJumpInfo = compareWithJumpOpportunities(
-        moveResult.moveInfo,
+        !!state.lockedActivePin,
+        moveResult.description,
         state.fields
       );
 
@@ -68,7 +88,7 @@ const boardReducer = (
           }),
         };
       } else {
-        if (moveResult.isLegal)
+        if (moveResult.legality.isLegal)
           return {
             ...state,
             fields: getFieldsWithHighlight({
@@ -76,7 +96,6 @@ const boardReducer = (
               targetField: action.f,
               shouldBeHighlighted: true,
             }),
-            lockedActivePin: null,
           };
         else return state;
       }
@@ -105,33 +124,58 @@ const boardReducer = (
         state.activePlayer
       );
 
-      const furtherJumpsPossibleForPin = moveResult.isJump
+      const { multiTileMoveInfo } = moveResult.legality;
+
+      const consecutiveCapturePossible = multiTileMoveInfo?.isCapture
         ? getAllPossibleJumpsForAPin(
-            moveResult.updatedPin,
-            moveResult.fields,
+            moveResult.outcome.updatedPin,
+            moveResult.outcome.fields,
             state.activePlayer
           )
         : [];
 
-      const forceAnotherJump = furtherJumpsPossibleForPin.length > 0;
-
+      const forceAnotherJump = consecutiveCapturePossible.length > 0;
       const gameStatus = getGameSatus(moveResult);
       const lockActivePin = forceAnotherJump || gameStatus.gameOver;
       const nextPlayer = lockActivePin
         ? state.activePlayer
         : getOtherPlayer(state.activePlayer);
 
-      const moveRecord = getMoveRecord(moveResult.moveInfo, state.moveHistory);
+      const moveRecord = getMoveRecord(moveResult, state.moveHistory);
 
       return {
         ...state,
-        fields: moveResult.fields,
-        activePin: moveResult.updatedPin,
-        lockedActivePin: lockActivePin ? moveResult.updatedPin : null,
+        fields: moveResult.outcome.fields,
+        activePin: moveResult.outcome.updatedPin,
+        lockedActivePin: lockActivePin ? moveResult.outcome.updatedPin : null,
         activePlayer: nextPlayer,
         moveHistory: [...state.moveHistory, moveRecord],
         gameStatus,
-        lastKilledPin: moveResult.killedPin || null,
+        lastKilledPin: moveResult.outcome.killedPin || null,
+      };
+    }
+
+    case SET_HIGHEST_YIELDING_JUMPS: {
+      const exclusivePin = state.lockedActivePin ? state.lockedActivePin : null;
+      const highestYieldingJumps = getHighestYieldingJumps(
+        state.fields,
+        state.activePin?.color,
+        exclusivePin
+      );
+
+      const pinsToShake = highestYieldingJumps.map(
+        (j) => j.description.activePin
+      );
+
+      return {
+        ...state,
+        showJumpOpportunities: action.value, // TODO: might be used later for user control to toggle hints
+        highestYieldingJumps,
+        fields: updatePinShake({
+          fields: state.fields,
+          pins: pinsToShake,
+          shouldShake: true,
+        }),
       };
     }
 
@@ -140,27 +184,5 @@ const boardReducer = (
     }
   }
 };
-
-function getOtherPlayer(player: Player) {
-  return {
-    color:
-      player.color === PLAYER_DATA.p1Color
-        ? PLAYER_DATA.p2Color
-        : PLAYER_DATA.p1Color,
-  };
-}
-
-interface FieldHighloghtConfig {
-  fields: Field[];
-  targetField: Field;
-  shouldBeHighlighted: boolean;
-}
-
-function getFieldsWithHighlight(config: FieldHighloghtConfig): Field[] {
-  return config.fields.map((f) => {
-    const fieldMatch = isAtSameLocation(f, config.targetField);
-    return fieldMatch ? { ...f, highlighted: config.shouldBeHighlighted } : f;
-  });
-}
 
 export default boardReducer;

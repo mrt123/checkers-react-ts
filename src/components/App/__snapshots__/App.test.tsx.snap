@@ -3,1785 +3,461 @@
 exports[`matches snapshot 1`] = `
 <div>
   <div
-    class="sc-ipEyDJ gkKnym"
+    class="sc-bqWxrE laMVq"
   >
     <div>
       <div
         class="sc-jSUZER aqICG"
       >
         <div
-          class="sc-hLBbgP hCqtxY"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            0
-            /y
-            0
-          </span>
-        </div>
-        <div
-          class="sc-hLBbgP jQCCOo"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            1
-            /y
-            0
-          </span>
-          <div
-            class="sc-bcXHqe cxoWjc react-draggable"
-            color="orange"
-            style="transform: translate(0px,0px);"
-          >
-            <div
-              class="sc-gswNZR IzyjA"
-            >
-              <div
-                class="sc-dkrFOg kXsXSV"
-                direction="down"
-              />
-            </div>
-          </div>
-        </div>
-        <div
-          class="sc-hLBbgP hCqtxY"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            2
-            /y
-            0
-          </span>
-        </div>
-        <div
-          class="sc-hLBbgP jQCCOo"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            3
-            /y
-            0
-          </span>
-          <div
-            class="sc-bcXHqe cxoWjc react-draggable"
-            color="orange"
-            style="transform: translate(0px,0px);"
-          >
-            <div
-              class="sc-gswNZR IzyjA"
-            >
-              <div
-                class="sc-dkrFOg kXsXSV"
-                direction="down"
-              />
-            </div>
-          </div>
-        </div>
-        <div
-          class="sc-hLBbgP hCqtxY"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            4
-            /y
-            0
-          </span>
-        </div>
-        <div
-          class="sc-hLBbgP jQCCOo"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            5
-            /y
-            0
-          </span>
-          <div
-            class="sc-bcXHqe cxoWjc react-draggable"
-            color="orange"
-            style="transform: translate(0px,0px);"
-          >
-            <div
-              class="sc-gswNZR IzyjA"
-            >
-              <div
-                class="sc-dkrFOg kXsXSV"
-                direction="down"
-              />
-            </div>
-          </div>
-        </div>
-        <div
-          class="sc-hLBbgP hCqtxY"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            6
-            /y
-            0
-          </span>
-        </div>
-        <div
-          class="sc-hLBbgP jQCCOo"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            7
-            /y
-            0
-          </span>
-          <div
-            class="sc-bcXHqe cxoWjc react-draggable"
-            color="orange"
-            style="transform: translate(0px,0px);"
-          >
-            <div
-              class="sc-gswNZR IzyjA"
-            >
-              <div
-                class="sc-dkrFOg kXsXSV"
-                direction="down"
-              />
-            </div>
-          </div>
-        </div>
-        <div
-          class="sc-hLBbgP hCqtxY"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            8
-            /y
-            0
-          </span>
-        </div>
-        <div
-          class="sc-hLBbgP jQCCOo"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            9
-            /y
-            0
-          </span>
-          <div
-            class="sc-bcXHqe cxoWjc react-draggable"
-            color="orange"
-            style="transform: translate(0px,0px);"
-          >
-            <div
-              class="sc-gswNZR IzyjA"
-            >
-              <div
-                class="sc-dkrFOg kXsXSV"
-                direction="down"
-              />
-            </div>
-          </div>
-        </div>
-        <div
-          class="sc-hLBbgP jQCCOo"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            0
-            /y
-            1
-          </span>
-          <div
-            class="sc-bcXHqe cxoWjc react-draggable"
-            color="orange"
-            style="transform: translate(0px,0px);"
-          >
-            <div
-              class="sc-gswNZR IzyjA"
-            >
-              <div
-                class="sc-dkrFOg kXsXSV"
-                direction="down"
-              />
-            </div>
-          </div>
-        </div>
-        <div
-          class="sc-hLBbgP hCqtxY"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            1
-            /y
-            1
-          </span>
-        </div>
-        <div
-          class="sc-hLBbgP jQCCOo"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            2
-            /y
-            1
-          </span>
-          <div
-            class="sc-bcXHqe cxoWjc react-draggable"
-            color="orange"
-            style="transform: translate(0px,0px);"
-          >
-            <div
-              class="sc-gswNZR IzyjA"
-            >
-              <div
-                class="sc-dkrFOg kXsXSV"
-                direction="down"
-              />
-            </div>
-          </div>
-        </div>
-        <div
-          class="sc-hLBbgP hCqtxY"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            3
-            /y
-            1
-          </span>
-        </div>
-        <div
-          class="sc-hLBbgP jQCCOo"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            4
-            /y
-            1
-          </span>
-          <div
-            class="sc-bcXHqe cxoWjc react-draggable"
-            color="orange"
-            style="transform: translate(0px,0px);"
-          >
-            <div
-              class="sc-gswNZR IzyjA"
-            >
-              <div
-                class="sc-dkrFOg kXsXSV"
-                direction="down"
-              />
-            </div>
-          </div>
-        </div>
-        <div
-          class="sc-hLBbgP hCqtxY"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            5
-            /y
-            1
-          </span>
-        </div>
-        <div
-          class="sc-hLBbgP jQCCOo"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            6
-            /y
-            1
-          </span>
-          <div
-            class="sc-bcXHqe cxoWjc react-draggable"
-            color="orange"
-            style="transform: translate(0px,0px);"
-          >
-            <div
-              class="sc-gswNZR IzyjA"
-            >
-              <div
-                class="sc-dkrFOg kXsXSV"
-                direction="down"
-              />
-            </div>
-          </div>
-        </div>
-        <div
-          class="sc-hLBbgP hCqtxY"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            7
-            /y
-            1
-          </span>
-        </div>
-        <div
-          class="sc-hLBbgP jQCCOo"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            8
-            /y
-            1
-          </span>
-          <div
-            class="sc-bcXHqe cxoWjc react-draggable"
-            color="orange"
-            style="transform: translate(0px,0px);"
-          >
-            <div
-              class="sc-gswNZR IzyjA"
-            >
-              <div
-                class="sc-dkrFOg kXsXSV"
-                direction="down"
-              />
-            </div>
-          </div>
-        </div>
-        <div
-          class="sc-hLBbgP hCqtxY"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            9
-            /y
-            1
-          </span>
-        </div>
-        <div
-          class="sc-hLBbgP hCqtxY"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            0
-            /y
-            2
-          </span>
-        </div>
-        <div
-          class="sc-hLBbgP jQCCOo"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            1
-            /y
-            2
-          </span>
-          <div
-            class="sc-bcXHqe cxoWjc react-draggable"
-            color="orange"
-            style="transform: translate(0px,0px);"
-          >
-            <div
-              class="sc-gswNZR IzyjA"
-            >
-              <div
-                class="sc-dkrFOg kXsXSV"
-                direction="down"
-              />
-            </div>
-          </div>
-        </div>
-        <div
-          class="sc-hLBbgP hCqtxY"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            2
-            /y
-            2
-          </span>
-        </div>
-        <div
-          class="sc-hLBbgP jQCCOo"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            3
-            /y
-            2
-          </span>
-          <div
-            class="sc-bcXHqe cxoWjc react-draggable"
-            color="orange"
-            style="transform: translate(0px,0px);"
-          >
-            <div
-              class="sc-gswNZR IzyjA"
-            >
-              <div
-                class="sc-dkrFOg kXsXSV"
-                direction="down"
-              />
-            </div>
-          </div>
-        </div>
-        <div
-          class="sc-hLBbgP hCqtxY"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            4
-            /y
-            2
-          </span>
-        </div>
-        <div
-          class="sc-hLBbgP jQCCOo"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            5
-            /y
-            2
-          </span>
-          <div
-            class="sc-bcXHqe cxoWjc react-draggable"
-            color="orange"
-            style="transform: translate(0px,0px);"
-          >
-            <div
-              class="sc-gswNZR IzyjA"
-            >
-              <div
-                class="sc-dkrFOg kXsXSV"
-                direction="down"
-              />
-            </div>
-          </div>
-        </div>
-        <div
-          class="sc-hLBbgP hCqtxY"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            6
-            /y
-            2
-          </span>
-        </div>
-        <div
-          class="sc-hLBbgP jQCCOo"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            7
-            /y
-            2
-          </span>
-          <div
-            class="sc-bcXHqe cxoWjc react-draggable"
-            color="orange"
-            style="transform: translate(0px,0px);"
-          >
-            <div
-              class="sc-gswNZR IzyjA"
-            >
-              <div
-                class="sc-dkrFOg kXsXSV"
-                direction="down"
-              />
-            </div>
-          </div>
-        </div>
-        <div
-          class="sc-hLBbgP hCqtxY"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            8
-            /y
-            2
-          </span>
-        </div>
-        <div
-          class="sc-hLBbgP jQCCOo"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            9
-            /y
-            2
-          </span>
-          <div
-            class="sc-bcXHqe cxoWjc react-draggable"
-            color="orange"
-            style="transform: translate(0px,0px);"
-          >
-            <div
-              class="sc-gswNZR IzyjA"
-            >
-              <div
-                class="sc-dkrFOg kXsXSV"
-                direction="down"
-              />
-            </div>
-          </div>
-        </div>
-        <div
-          class="sc-hLBbgP jQCCOo"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            0
-            /y
-            3
-          </span>
-          <div
-            class="sc-bcXHqe cxoWjc react-draggable"
-            color="orange"
-            style="transform: translate(0px,0px);"
-          >
-            <div
-              class="sc-gswNZR IzyjA"
-            >
-              <div
-                class="sc-dkrFOg kXsXSV"
-                direction="down"
-              />
-            </div>
-          </div>
-        </div>
-        <div
-          class="sc-hLBbgP hCqtxY"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            1
-            /y
-            3
-          </span>
-        </div>
-        <div
-          class="sc-hLBbgP jQCCOo"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            2
-            /y
-            3
-          </span>
-          <div
-            class="sc-bcXHqe cxoWjc react-draggable"
-            color="orange"
-            style="transform: translate(0px,0px);"
-          >
-            <div
-              class="sc-gswNZR IzyjA"
-            >
-              <div
-                class="sc-dkrFOg kXsXSV"
-                direction="down"
-              />
-            </div>
-          </div>
-        </div>
-        <div
-          class="sc-hLBbgP hCqtxY"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            3
-            /y
-            3
-          </span>
-        </div>
-        <div
-          class="sc-hLBbgP jQCCOo"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            4
-            /y
-            3
-          </span>
-          <div
-            class="sc-bcXHqe cxoWjc react-draggable"
-            color="orange"
-            style="transform: translate(0px,0px);"
-          >
-            <div
-              class="sc-gswNZR IzyjA"
-            >
-              <div
-                class="sc-dkrFOg kXsXSV"
-                direction="down"
-              />
-            </div>
-          </div>
-        </div>
-        <div
-          class="sc-hLBbgP hCqtxY"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            5
-            /y
-            3
-          </span>
-        </div>
-        <div
-          class="sc-hLBbgP jQCCOo"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            6
-            /y
-            3
-          </span>
-          <div
-            class="sc-bcXHqe cxoWjc react-draggable"
-            color="orange"
-            style="transform: translate(0px,0px);"
-          >
-            <div
-              class="sc-gswNZR IzyjA"
-            >
-              <div
-                class="sc-dkrFOg kXsXSV"
-                direction="down"
-              />
-            </div>
-          </div>
-        </div>
-        <div
-          class="sc-hLBbgP hCqtxY"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            7
-            /y
-            3
-          </span>
-        </div>
-        <div
-          class="sc-hLBbgP jQCCOo"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            8
-            /y
-            3
-          </span>
-          <div
-            class="sc-bcXHqe cxoWjc react-draggable"
-            color="orange"
-            style="transform: translate(0px,0px);"
-          >
-            <div
-              class="sc-gswNZR IzyjA"
-            >
-              <div
-                class="sc-dkrFOg kXsXSV"
-                direction="down"
-              />
-            </div>
-          </div>
-        </div>
-        <div
-          class="sc-hLBbgP hCqtxY"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            9
-            /y
-            3
-          </span>
-        </div>
-        <div
-          class="sc-hLBbgP hCqtxY"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            0
-            /y
-            4
-          </span>
-        </div>
-        <div
-          class="sc-hLBbgP jQCCOo"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            1
-            /y
-            4
-          </span>
-        </div>
-        <div
-          class="sc-hLBbgP hCqtxY"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            2
-            /y
-            4
-          </span>
-        </div>
-        <div
-          class="sc-hLBbgP jQCCOo"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            3
-            /y
-            4
-          </span>
-        </div>
-        <div
-          class="sc-hLBbgP hCqtxY"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            4
-            /y
-            4
-          </span>
-        </div>
-        <div
-          class="sc-hLBbgP jQCCOo"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            5
-            /y
-            4
-          </span>
-        </div>
-        <div
-          class="sc-hLBbgP hCqtxY"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            6
-            /y
-            4
-          </span>
-        </div>
-        <div
-          class="sc-hLBbgP jQCCOo"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            7
-            /y
-            4
-          </span>
-        </div>
-        <div
-          class="sc-hLBbgP hCqtxY"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            8
-            /y
-            4
-          </span>
-        </div>
-        <div
-          class="sc-hLBbgP jQCCOo"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            9
-            /y
-            4
-          </span>
-        </div>
-        <div
-          class="sc-hLBbgP jQCCOo"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            0
-            /y
-            5
-          </span>
-        </div>
-        <div
-          class="sc-hLBbgP hCqtxY"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            1
-            /y
-            5
-          </span>
-        </div>
-        <div
-          class="sc-hLBbgP jQCCOo"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            2
-            /y
-            5
-          </span>
-        </div>
-        <div
-          class="sc-hLBbgP hCqtxY"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            3
-            /y
-            5
-          </span>
-        </div>
-        <div
-          class="sc-hLBbgP jQCCOo"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            4
-            /y
-            5
-          </span>
-        </div>
-        <div
-          class="sc-hLBbgP hCqtxY"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            5
-            /y
-            5
-          </span>
-        </div>
-        <div
-          class="sc-hLBbgP jQCCOo"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            6
-            /y
-            5
-          </span>
-        </div>
-        <div
-          class="sc-hLBbgP hCqtxY"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            7
-            /y
-            5
-          </span>
-        </div>
-        <div
-          class="sc-hLBbgP jQCCOo"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            8
-            /y
-            5
-          </span>
-        </div>
-        <div
-          class="sc-hLBbgP hCqtxY"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            9
-            /y
-            5
-          </span>
-        </div>
-        <div
-          class="sc-hLBbgP hCqtxY"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            0
-            /y
-            6
-          </span>
-        </div>
-        <div
-          class="sc-hLBbgP jQCCOo"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            1
-            /y
-            6
-          </span>
-          <div
-            class="sc-bcXHqe fnyWrU react-draggable"
-            color="rgb(222,222,222)"
-            style="transform: translate(0px,0px);"
-          >
-            <div
-              class="sc-gswNZR IzyjA"
-            >
-              <div
-                class="sc-dkrFOg hfTONb"
-                direction="up"
-              />
-            </div>
-          </div>
-        </div>
-        <div
-          class="sc-hLBbgP hCqtxY"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            2
-            /y
-            6
-          </span>
-        </div>
-        <div
-          class="sc-hLBbgP jQCCOo"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            3
-            /y
-            6
-          </span>
-          <div
-            class="sc-bcXHqe fnyWrU react-draggable"
-            color="rgb(222,222,222)"
-            style="transform: translate(0px,0px);"
-          >
-            <div
-              class="sc-gswNZR IzyjA"
-            >
-              <div
-                class="sc-dkrFOg hfTONb"
-                direction="up"
-              />
-            </div>
-          </div>
-        </div>
-        <div
-          class="sc-hLBbgP hCqtxY"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            4
-            /y
-            6
-          </span>
-        </div>
-        <div
-          class="sc-hLBbgP jQCCOo"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            5
-            /y
-            6
-          </span>
-          <div
-            class="sc-bcXHqe fnyWrU react-draggable"
-            color="rgb(222,222,222)"
-            style="transform: translate(0px,0px);"
-          >
-            <div
-              class="sc-gswNZR IzyjA"
-            >
-              <div
-                class="sc-dkrFOg hfTONb"
-                direction="up"
-              />
-            </div>
-          </div>
-        </div>
-        <div
-          class="sc-hLBbgP hCqtxY"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            6
-            /y
-            6
-          </span>
-        </div>
-        <div
-          class="sc-hLBbgP jQCCOo"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            7
-            /y
-            6
-          </span>
-          <div
-            class="sc-bcXHqe fnyWrU react-draggable"
-            color="rgb(222,222,222)"
-            style="transform: translate(0px,0px);"
-          >
-            <div
-              class="sc-gswNZR IzyjA"
-            >
-              <div
-                class="sc-dkrFOg hfTONb"
-                direction="up"
-              />
-            </div>
-          </div>
-        </div>
-        <div
-          class="sc-hLBbgP hCqtxY"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            8
-            /y
-            6
-          </span>
-        </div>
-        <div
-          class="sc-hLBbgP jQCCOo"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            9
-            /y
-            6
-          </span>
-          <div
-            class="sc-bcXHqe fnyWrU react-draggable"
-            color="rgb(222,222,222)"
-            style="transform: translate(0px,0px);"
-          >
-            <div
-              class="sc-gswNZR IzyjA"
-            >
-              <div
-                class="sc-dkrFOg hfTONb"
-                direction="up"
-              />
-            </div>
-          </div>
-        </div>
-        <div
-          class="sc-hLBbgP jQCCOo"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            0
-            /y
-            7
-          </span>
-          <div
-            class="sc-bcXHqe fnyWrU react-draggable"
-            color="rgb(222,222,222)"
-            style="transform: translate(0px,0px);"
-          >
-            <div
-              class="sc-gswNZR IzyjA"
-            >
-              <div
-                class="sc-dkrFOg hfTONb"
-                direction="up"
-              />
-            </div>
-          </div>
-        </div>
-        <div
-          class="sc-hLBbgP hCqtxY"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            1
-            /y
-            7
-          </span>
-        </div>
-        <div
-          class="sc-hLBbgP jQCCOo"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            2
-            /y
-            7
-          </span>
-          <div
-            class="sc-bcXHqe fnyWrU react-draggable"
-            color="rgb(222,222,222)"
-            style="transform: translate(0px,0px);"
-          >
-            <div
-              class="sc-gswNZR IzyjA"
-            >
-              <div
-                class="sc-dkrFOg hfTONb"
-                direction="up"
-              />
-            </div>
-          </div>
-        </div>
-        <div
-          class="sc-hLBbgP hCqtxY"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            3
-            /y
-            7
-          </span>
-        </div>
-        <div
-          class="sc-hLBbgP jQCCOo"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            4
-            /y
-            7
-          </span>
-          <div
-            class="sc-bcXHqe fnyWrU react-draggable"
-            color="rgb(222,222,222)"
-            style="transform: translate(0px,0px);"
-          >
-            <div
-              class="sc-gswNZR IzyjA"
-            >
-              <div
-                class="sc-dkrFOg hfTONb"
-                direction="up"
-              />
-            </div>
-          </div>
-        </div>
-        <div
-          class="sc-hLBbgP hCqtxY"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            5
-            /y
-            7
-          </span>
-        </div>
-        <div
-          class="sc-hLBbgP jQCCOo"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            6
-            /y
-            7
-          </span>
-          <div
-            class="sc-bcXHqe fnyWrU react-draggable"
-            color="rgb(222,222,222)"
-            style="transform: translate(0px,0px);"
-          >
-            <div
-              class="sc-gswNZR IzyjA"
-            >
-              <div
-                class="sc-dkrFOg hfTONb"
-                direction="up"
-              />
-            </div>
-          </div>
-        </div>
-        <div
-          class="sc-hLBbgP hCqtxY"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            7
-            /y
-            7
-          </span>
-        </div>
-        <div
-          class="sc-hLBbgP jQCCOo"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            8
-            /y
-            7
-          </span>
-          <div
-            class="sc-bcXHqe fnyWrU react-draggable"
-            color="rgb(222,222,222)"
-            style="transform: translate(0px,0px);"
-          >
-            <div
-              class="sc-gswNZR IzyjA"
-            >
-              <div
-                class="sc-dkrFOg hfTONb"
-                direction="up"
-              />
-            </div>
-          </div>
-        </div>
-        <div
-          class="sc-hLBbgP hCqtxY"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            9
-            /y
-            7
-          </span>
-        </div>
-        <div
-          class="sc-hLBbgP hCqtxY"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            0
-            /y
-            8
-          </span>
-        </div>
-        <div
-          class="sc-hLBbgP jQCCOo"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            1
-            /y
-            8
-          </span>
-          <div
-            class="sc-bcXHqe fnyWrU react-draggable"
-            color="rgb(222,222,222)"
-            style="transform: translate(0px,0px);"
-          >
-            <div
-              class="sc-gswNZR IzyjA"
-            >
-              <div
-                class="sc-dkrFOg hfTONb"
-                direction="up"
-              />
-            </div>
-          </div>
-        </div>
-        <div
-          class="sc-hLBbgP hCqtxY"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            2
-            /y
-            8
-          </span>
-        </div>
-        <div
-          class="sc-hLBbgP jQCCOo"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            3
-            /y
-            8
-          </span>
-          <div
-            class="sc-bcXHqe fnyWrU react-draggable"
-            color="rgb(222,222,222)"
-            style="transform: translate(0px,0px);"
-          >
-            <div
-              class="sc-gswNZR IzyjA"
-            >
-              <div
-                class="sc-dkrFOg hfTONb"
-                direction="up"
-              />
-            </div>
-          </div>
-        </div>
-        <div
-          class="sc-hLBbgP hCqtxY"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            4
-            /y
-            8
-          </span>
-        </div>
-        <div
-          class="sc-hLBbgP jQCCOo"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            5
-            /y
-            8
-          </span>
-          <div
-            class="sc-bcXHqe fnyWrU react-draggable"
-            color="rgb(222,222,222)"
-            style="transform: translate(0px,0px);"
-          >
-            <div
-              class="sc-gswNZR IzyjA"
-            >
-              <div
-                class="sc-dkrFOg hfTONb"
-                direction="up"
-              />
-            </div>
-          </div>
-        </div>
-        <div
-          class="sc-hLBbgP hCqtxY"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            6
-            /y
-            8
-          </span>
-        </div>
-        <div
-          class="sc-hLBbgP jQCCOo"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            7
-            /y
-            8
-          </span>
-          <div
-            class="sc-bcXHqe fnyWrU react-draggable"
-            color="rgb(222,222,222)"
-            style="transform: translate(0px,0px);"
-          >
-            <div
-              class="sc-gswNZR IzyjA"
-            >
-              <div
-                class="sc-dkrFOg hfTONb"
-                direction="up"
-              />
-            </div>
-          </div>
-        </div>
-        <div
-          class="sc-hLBbgP hCqtxY"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            8
-            /y
-            8
-          </span>
-        </div>
-        <div
-          class="sc-hLBbgP jQCCOo"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            9
-            /y
-            8
-          </span>
-          <div
-            class="sc-bcXHqe fnyWrU react-draggable"
-            color="rgb(222,222,222)"
-            style="transform: translate(0px,0px);"
-          >
-            <div
-              class="sc-gswNZR IzyjA"
-            >
-              <div
-                class="sc-dkrFOg hfTONb"
-                direction="up"
-              />
-            </div>
-          </div>
-        </div>
-        <div
-          class="sc-hLBbgP jQCCOo"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            0
-            /y
-            9
-          </span>
-          <div
-            class="sc-bcXHqe fnyWrU react-draggable"
-            color="rgb(222,222,222)"
-            style="transform: translate(0px,0px);"
-          >
-            <div
-              class="sc-gswNZR IzyjA"
-            >
-              <div
-                class="sc-dkrFOg hfTONb"
-                direction="up"
-              />
-            </div>
-          </div>
-        </div>
-        <div
-          class="sc-hLBbgP hCqtxY"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            1
-            /y
-            9
-          </span>
-        </div>
-        <div
-          class="sc-hLBbgP jQCCOo"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            2
-            /y
-            9
-          </span>
-          <div
-            class="sc-bcXHqe fnyWrU react-draggable"
-            color="rgb(222,222,222)"
-            style="transform: translate(0px,0px);"
-          >
-            <div
-              class="sc-gswNZR IzyjA"
-            >
-              <div
-                class="sc-dkrFOg hfTONb"
-                direction="up"
-              />
-            </div>
-          </div>
-        </div>
-        <div
-          class="sc-hLBbgP hCqtxY"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            3
-            /y
-            9
-          </span>
-        </div>
-        <div
-          class="sc-hLBbgP jQCCOo"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            4
-            /y
-            9
-          </span>
-          <div
-            class="sc-bcXHqe fnyWrU react-draggable"
-            color="rgb(222,222,222)"
-            style="transform: translate(0px,0px);"
-          >
-            <div
-              class="sc-gswNZR IzyjA"
-            >
-              <div
-                class="sc-dkrFOg hfTONb"
-                direction="up"
-              />
-            </div>
-          </div>
-        </div>
-        <div
-          class="sc-hLBbgP hCqtxY"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            5
-            /y
-            9
-          </span>
-        </div>
-        <div
-          class="sc-hLBbgP jQCCOo"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            6
-            /y
-            9
-          </span>
-          <div
-            class="sc-bcXHqe fnyWrU react-draggable"
-            color="rgb(222,222,222)"
-            style="transform: translate(0px,0px);"
-          >
-            <div
-              class="sc-gswNZR IzyjA"
-            >
-              <div
-                class="sc-dkrFOg hfTONb"
-                direction="up"
-              />
-            </div>
-          </div>
-        </div>
-        <div
-          class="sc-hLBbgP hCqtxY"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            7
-            /y
-            9
-          </span>
-        </div>
-        <div
-          class="sc-hLBbgP jQCCOo"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            8
-            /y
-            9
-          </span>
-          <div
-            class="sc-bcXHqe fnyWrU react-draggable"
-            color="rgb(222,222,222)"
-            style="transform: translate(0px,0px);"
-          >
-            <div
-              class="sc-gswNZR IzyjA"
-            >
-              <div
-                class="sc-dkrFOg hfTONb"
-                direction="up"
-              />
-            </div>
-          </div>
-        </div>
-        <div
-          class="sc-hLBbgP hCqtxY"
-        >
-          <span
-            class="sc-eDvSVe kWugQr"
-          >
-            x
-            9
-            /y
-            9
-          </span>
-        </div>
-      </div>
-      <div
-        class="sc-csuSiG hoBgbB"
-      >
-        <span
-          class="sc-gKPRtg dOalrf"
+          class="sc-hLBbgP bldSqn"
           color="white"
         />
         <div
-          class="sc-eDWCr lfJnsr"
+          class="sc-hLBbgP dCxjxY"
+          color="black"
+        />
+        <div
+          class="sc-hLBbgP bldSqn"
+          color="white"
+        />
+        <div
+          class="sc-hLBbgP dCxjxY"
+          color="black"
+        />
+        <div
+          class="sc-hLBbgP bldSqn"
+          color="white"
+        />
+        <div
+          class="sc-hLBbgP dCxjxY"
+          color="black"
+        />
+        <div
+          class="sc-hLBbgP bldSqn"
+          color="white"
+        />
+        <div
+          class="sc-hLBbgP dCxjxY"
+          color="black"
+        >
+          <div
+            class="sc-bcXHqe gGFMfw react-draggable"
+            color="rgb(222,222,222)"
+            style="transform: translate(0px,0px);"
+          >
+            <div
+              class="sc-dkrFOg fmVpSy"
+            >
+              <div
+                class="sc-gswNZR eMwWNB"
+                direction="up"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="sc-hLBbgP bldSqn"
+          color="white"
+        />
+        <div
+          class="sc-hLBbgP dCxjxY"
+          color="black"
+        />
+        <div
+          class="sc-hLBbgP dCxjxY"
+          color="black"
+        />
+        <div
+          class="sc-hLBbgP bldSqn"
+          color="white"
+        />
+        <div
+          class="sc-hLBbgP dCxjxY"
+          color="black"
+        />
+        <div
+          class="sc-hLBbgP bldSqn"
+          color="white"
+        />
+        <div
+          class="sc-hLBbgP dCxjxY"
+          color="black"
+        />
+        <div
+          class="sc-hLBbgP bldSqn"
+          color="white"
+        />
+        <div
+          class="sc-hLBbgP dCxjxY"
+          color="black"
+        />
+        <div
+          class="sc-hLBbgP bldSqn"
+          color="white"
+        />
+        <div
+          class="sc-hLBbgP dCxjxY"
+          color="black"
+        />
+        <div
+          class="sc-hLBbgP bldSqn"
+          color="white"
+        />
+        <div
+          class="sc-hLBbgP bldSqn"
+          color="white"
+        />
+        <div
+          class="sc-hLBbgP dCxjxY"
+          color="black"
+        />
+        <div
+          class="sc-hLBbgP bldSqn"
+          color="white"
+        />
+        <div
+          class="sc-hLBbgP dCxjxY"
+          color="black"
+        />
+        <div
+          class="sc-hLBbgP bldSqn"
+          color="white"
+        />
+        <div
+          class="sc-hLBbgP dCxjxY"
+          color="black"
+        >
+          <div
+            class="sc-bcXHqe fKBXoM react-draggable"
+            color="orange"
+            style="transform: translate(0px,0px);"
+          >
+            <div
+              class="sc-dkrFOg fmVpSy"
+            >
+              <div
+                class="sc-gswNZR ijbjVD"
+                direction="down"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="sc-hLBbgP bldSqn"
+          color="white"
+        />
+        <div
+          class="sc-hLBbgP dCxjxY"
+          color="black"
+        />
+        <div
+          class="sc-hLBbgP bldSqn"
+          color="white"
+        />
+        <div
+          class="sc-hLBbgP dCxjxY"
+          color="black"
+        />
+        <div
+          class="sc-hLBbgP dCxjxY"
+          color="black"
+        />
+        <div
+          class="sc-hLBbgP bldSqn"
+          color="white"
+        />
+        <div
+          class="sc-hLBbgP dCxjxY"
+          color="black"
+        />
+        <div
+          class="sc-hLBbgP bldSqn"
+          color="white"
+        />
+        <div
+          class="sc-hLBbgP dCxjxY"
+          color="black"
+        />
+        <div
+          class="sc-hLBbgP bldSqn"
+          color="white"
+        />
+        <div
+          class="sc-hLBbgP dCxjxY"
+          color="black"
+        />
+        <div
+          class="sc-hLBbgP bldSqn"
+          color="white"
+        />
+        <div
+          class="sc-hLBbgP dCxjxY"
+          color="black"
+        />
+        <div
+          class="sc-hLBbgP bldSqn"
+          color="white"
+        />
+        <div
+          class="sc-hLBbgP bldSqn"
+          color="white"
+        />
+        <div
+          class="sc-hLBbgP dCxjxY"
+          color="black"
+        />
+        <div
+          class="sc-hLBbgP bldSqn"
+          color="white"
+        />
+        <div
+          class="sc-hLBbgP dCxjxY"
+          color="black"
+        />
+        <div
+          class="sc-hLBbgP bldSqn"
+          color="white"
+        />
+        <div
+          class="sc-hLBbgP dCxjxY"
+          color="black"
+        />
+        <div
+          class="sc-hLBbgP bldSqn"
+          color="white"
+        />
+        <div
+          class="sc-hLBbgP dCxjxY"
+          color="black"
+        />
+        <div
+          class="sc-hLBbgP bldSqn"
+          color="white"
+        />
+        <div
+          class="sc-hLBbgP dCxjxY"
+          color="black"
+        />
+        <div
+          class="sc-hLBbgP dCxjxY"
+          color="black"
+        />
+        <div
+          class="sc-hLBbgP bldSqn"
+          color="white"
+        />
+        <div
+          class="sc-hLBbgP dCxjxY"
+          color="black"
+        />
+        <div
+          class="sc-hLBbgP bldSqn"
+          color="white"
+        />
+        <div
+          class="sc-hLBbgP dCxjxY"
+          color="black"
+        />
+        <div
+          class="sc-hLBbgP bldSqn"
+          color="white"
+        />
+        <div
+          class="sc-hLBbgP dCxjxY"
+          color="black"
+        />
+        <div
+          class="sc-hLBbgP bldSqn"
+          color="white"
+        />
+        <div
+          class="sc-hLBbgP dCxjxY"
+          color="black"
+        />
+        <div
+          class="sc-hLBbgP bldSqn"
+          color="white"
+        />
+        <div
+          class="sc-hLBbgP bldSqn"
+          color="white"
+        />
+        <div
+          class="sc-hLBbgP dCxjxY"
+          color="black"
+        />
+        <div
+          class="sc-hLBbgP bldSqn"
+          color="white"
+        />
+        <div
+          class="sc-hLBbgP dCxjxY"
+          color="black"
+        />
+        <div
+          class="sc-hLBbgP bldSqn"
+          color="white"
+        />
+        <div
+          class="sc-hLBbgP dCxjxY"
+          color="black"
+        />
+        <div
+          class="sc-hLBbgP bldSqn"
+          color="white"
+        />
+        <div
+          class="sc-hLBbgP dCxjxY"
+          color="black"
+        />
+        <div
+          class="sc-hLBbgP bldSqn"
+          color="white"
+        />
+        <div
+          class="sc-hLBbgP dCxjxY"
+          color="black"
+        />
+        <div
+          class="sc-hLBbgP dCxjxY"
+          color="black"
+        />
+        <div
+          class="sc-hLBbgP bldSqn"
+          color="white"
+        />
+        <div
+          class="sc-hLBbgP dCxjxY"
+          color="black"
+        />
+        <div
+          class="sc-hLBbgP bldSqn"
+          color="white"
+        />
+        <div
+          class="sc-hLBbgP dCxjxY"
+          color="black"
+        />
+        <div
+          class="sc-hLBbgP bldSqn"
+          color="white"
+        />
+        <div
+          class="sc-hLBbgP dCxjxY"
+          color="black"
+        />
+        <div
+          class="sc-hLBbgP bldSqn"
+          color="white"
+        />
+        <div
+          class="sc-hLBbgP dCxjxY"
+          color="black"
+        />
+        <div
+          class="sc-hLBbgP bldSqn"
+          color="white"
+        />
+        <div
+          class="sc-hLBbgP bldSqn"
+          color="white"
+        />
+        <div
+          class="sc-hLBbgP dCxjxY"
+          color="black"
+        />
+        <div
+          class="sc-hLBbgP bldSqn"
+          color="white"
+        />
+        <div
+          class="sc-hLBbgP dCxjxY"
+          color="black"
+        />
+        <div
+          class="sc-hLBbgP bldSqn"
+          color="white"
+        />
+        <div
+          class="sc-hLBbgP dCxjxY"
+          color="black"
+        />
+        <div
+          class="sc-hLBbgP bldSqn"
+          color="white"
+        />
+        <div
+          class="sc-hLBbgP dCxjxY"
+          color="black"
+        />
+        <div
+          class="sc-hLBbgP bldSqn"
+          color="white"
+        />
+        <div
+          class="sc-hLBbgP dCxjxY"
+          color="black"
+        />
+        <div
+          class="sc-hLBbgP dCxjxY"
+          color="black"
+        />
+        <div
+          class="sc-hLBbgP bldSqn"
+          color="white"
+        />
+        <div
+          class="sc-hLBbgP dCxjxY"
+          color="black"
+        />
+        <div
+          class="sc-hLBbgP bldSqn"
+          color="white"
+        />
+        <div
+          class="sc-hLBbgP dCxjxY"
+          color="black"
+        />
+        <div
+          class="sc-hLBbgP bldSqn"
+          color="white"
+        />
+        <div
+          class="sc-hLBbgP dCxjxY"
+          color="black"
+        />
+        <div
+          class="sc-hLBbgP bldSqn"
+          color="white"
+        />
+        <div
+          class="sc-hLBbgP dCxjxY"
+          color="black"
+        />
+        <div
+          class="sc-hLBbgP bldSqn"
+          color="white"
+        />
+      </div>
+      <div
+        class="sc-ipEyDJ iwjXVa"
+      >
+        <span
+          class="sc-gKPRtg gXNtLV"
+          color="white"
+        />
+        <div
+          class="sc-csuSiG bLCRUo"
         >
           next
         </div>
+      </div>
+      <div
+        class="sc-eDWCr hsPPCD"
+      >
+        v: 
+        1.1.0
       </div>
     </div>
     <div>
@@ -1820,7 +496,37 @@ exports[`matches snapshot 1`] = `
           <span
             class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
           >
-            redux logs
+            reduxLogs
+          </span>
+        </label>
+        <label
+          class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementStart css-1f2kvjf-MuiFormControlLabel-root"
+        >
+          <span
+            class="MuiSwitch-root MuiSwitch-sizeSmall css-1ycxvqq-MuiSwitch-root"
+          >
+            <span
+              class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
+            >
+              <input
+                class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+                type="checkbox"
+              />
+              <span
+                class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
+              />
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </span>
+            <span
+              class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
+            />
+          </span>
+          <span
+            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
+          >
+            fieldsCoordinates
           </span>
         </label>
       </div>
